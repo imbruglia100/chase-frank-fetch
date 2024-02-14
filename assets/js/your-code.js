@@ -49,7 +49,15 @@ export function postNewDogV2(name, age) {
 }
 
 export function deleteDog(id) {
-    
+    const url = `/dogs/${id}/delete`
+    const headers = {
+        "AUTH": "ckyut5wau0000jyv5bsrud90y",
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+    const options = {
+        headers: headers,
+        method: "POST"
+    }
 
-      return fetch("/dogs", options)
+      return fetch(url, options)
 }
